@@ -1,22 +1,20 @@
 # Spark DataSources
 
-# Spark_DataSources
+# 1. Previous steps: install IntelliJ Community + Scala plugin, Java 11, Spark and winutils in your computer
 
-# Previous steps: install IntelliJ Community + Scala plugin, Java 11, Spark and winutils in your computer
-
-## Install IntelliJ Community + Scala plugin
+## 1.1. Install IntelliJ Community + Scala plugin
 
 https://www.jetbrains.com/idea/download/?section=windows
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/aca9df76-eca9-4d52-b9a8-07e776be6ee7)
 
-## Install Java 11 (JDK) and set JAVA_HOME environmental variable
+## 1.2. Install Java 11 (JDK) and set JAVA_HOME environmental variable
 
 https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/6e7962b1-b0d0-4318-9ce4-b74cfb98b8a3)
 
-## Install Spark and set SPARK_HOME environmental variable or directly add the bin folder path in the PATH environmental variable
+## 1.3. Install Spark and set SPARK_HOME environmental variable or directly add the bin folder path in the PATH environmental variable
 
 https://spark.apache.org/downloads.html
 
@@ -26,7 +24,7 @@ Add the bin folder path to the PATH environmental variable
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/39b6b3fd-6cb3-4c67-82b4-1c3a1b5557b3)
 
-## Install winutils and set HADOOP_HOME environmental variable
+## 1.4. Install winutils and set HADOOP_HOME environmental variable
 
 https://github.com/kontext-tech/winutils
 
@@ -40,7 +38,7 @@ Add the bin folder path to the PATH environmental variable
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/e9e7591b-487e-4044-be00-85a7f537d0a2)
 
-# Install PostgreSQL and pgAdmin in you local laptop
+## 1.5. Install PostgreSQL and pgAdmin in you local laptop
 
 How to Install PostgreSQL 15 on Windows 10 [ 2023 Update ] Complete guide | pgAdmin 4
 
@@ -54,7 +52,7 @@ In the following URL you can download pgAdmin
 
 https://www.pgadmin.org/download/pgadmin-4-windows/
 
-# Run PostgreSQL in Docker container and create a database and populate a table
+## 1.6. Run PostgreSQL in Docker container and create a database and populate a table
 
 1. Pull and run the PostgreSQL docker container.
 
@@ -251,7 +249,7 @@ SELECT id FROM public.t1;
 20. Now connect to the PostgreSQL database and table with pgAdmin 4
 
 
-# Install PostgreSQL JDBC driver in Spark folder
+## 1.7. Install PostgreSQL JDBC driver in Spark folder
 
 Download the PostgreSQL JDBC driver from internet
 
@@ -261,10 +259,10 @@ Unzip and place the jar file "postgresql-42.6.0.jar" inside the path spark jars 
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/9bf312ee-279e-43fa-b2aa-7a7f35920a8d)
 
-# Run the application in IngelliJ
 
+# 2. Run the application in IngelliJ
 
-## See the dependencies: build.sbt file
+## 2.1. See the dependencies: build.sbt file
 
 ```
 ThisBuild / version := "0.1.0-SNAPSHOT"
@@ -285,7 +283,7 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.0"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 ```
 
-## See the scala source code: scala\com.sparkExample1\DataSources.scala file
+## 2.2. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
 ```scala
 package com.sparkExample1
