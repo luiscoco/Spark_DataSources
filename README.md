@@ -261,4 +261,170 @@ Unzip and place the jar file "postgresql-42.6.0.jar" inside the path spark jars 
 
 ![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/9bf312ee-279e-43fa-b2aa-7a7f35920a8d)
 
+# Run the application in IngelliJ
 
+
+## See the dependencies: build.sbt file
+
+```
+ThisBuild / version := "0.1.0-SNAPSHOT"
+
+ThisBuild / scalaVersion := "2.12.18"
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "FirstSparkProject"
+  )
+
+// https://mvnrepository.com/artifact/org.apache.spark/spark-core
+libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.0"
+
+// https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.0"
+
+libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+```
+
+## See the scala source code: scala\com.sparkExample1\DataSources.scala file
+
+```scala
+package com.sparkExample1
+
+import org.apache.spark.sql.{SaveMode, SparkSession}
+import org.apache.spark.sql.types._
+
+object DataSources extends App {
+
+  val spark = SparkSession.builder()
+    .appName("Data Sources and Formats")
+    .config("spark.master", "local")
+    .getOrCreate()
+
+  val carsSchema = StructType(Array(
+    StructField("Name", StringType),
+    StructField("Miles_per_Gallon", DoubleType),
+    StructField("Cylinders", LongType),
+    StructField("Displacement", DoubleType),
+    StructField("Horsepower", LongType),
+    StructField("Weight_in_lbs", LongType),
+    StructField("Acceleration", DoubleType),
+    StructField("Year", DateType),
+    StructField("Origin", StringType)
+  ))
+
+  /*
+    Reading a DF:
+    - format
+    - schema or inferSchema = true
+    - path
+    - zero or more options
+   */
+  val carsDF = spark.read
+    .format("json")
+    .schema(carsSchema) // enforce a schema
+    .option("mode", "failFast") // dropMalformed, permissive (default)
+    .option("path", "src/main/resources/data/cars.json")
+    .load()
+
+  // alternative reading with options map
+  val carsDFWithOptionMap = spark.read
+    .format("json")
+    .options(Map(
+      "mode" -> "failFast",
+      "path" -> "src/main/resources/data/cars.json",
+      "inferSchema" -> "true"
+    ))
+    .load()
+
+  /*
+   Writing DFs
+   - format
+   - save mode = overwrite, append, ignore, errorIfExists
+   - path
+   - zero or more options
+  */
+  carsDF.write
+    .format("json")
+    .mode(SaveMode.Overwrite)
+    .save("src/main/resources/data/cars_dupe.json")
+
+  // JSON flags
+  spark.read
+    .schema(carsSchema)
+    .option("dateFormat", "yyyy-MM-dd") // couple with schema; if Spark fails parsing, it will put null
+    .option("allowSingleQuotes", "true")
+    .option("compression", "uncompressed") // bzip2, gzip, lz4, snappy, deflate
+    .json("src/main/resources/data/cars.json")
+
+  // CSV flags
+  val stocksSchema = StructType(Array(
+    StructField("symbol", StringType),
+    StructField("date", DateType),
+    StructField("price", DoubleType)
+  ))
+
+  spark.read
+    .schema(stocksSchema)
+    .option("dateFormat", "MMM d yyyy")
+    .option("header", "true")
+    .option("sep", ",")
+    .option("nullValue", "")
+    .csv("src/main/resources/data/stocks.csv")
+
+  // Parquet
+  carsDF.write
+    .mode(SaveMode.Overwrite)
+    .save("src/main/resources/data/cars.parquet")
+
+  // Text files
+  spark.read.text("src/main/resources/data/sampleTextFile.txt").show()
+
+  // Reading from a remote DB
+  val driver = "org.postgresql.Driver"
+  val url = "jdbc:postgresql://localhost:5432/mydb"
+  val user = "myuser"
+  val password = "mypass"
+
+  val employeesDF = spark.read
+    .format("jdbc")
+    .option("driver", driver)
+    .option("url", url)
+    .option("user", user)
+    .option("password", password)
+    .option("dbtable", "public.t1")
+    .load()
+
+  employeesDF.show()
+
+  /**
+    * Exercise: read the movies DF, then write it as
+    * - tab-separated values file
+    * - snappy Parquet
+    * - table "public.movies" in the Postgres DB
+    */
+
+  val moviesDF = spark.read.json("src/main/resources/data/movies.json")
+
+  // TSV
+  moviesDF.write
+    .format("csv")
+    .option("header", "true")
+    .option("sep", "\t")
+    .save("src/main/resources/data/movies.csv")
+
+  // Parquet
+  moviesDF.write.save("src/main/resources/data/movies.parquet")
+
+  // save to DF
+/*
+moviesDF.write
+  .format("jdbc")
+  .option("driver", driver)
+  .option("url", url)
+  .option("user", user)
+  .option("password", password)
+  .option("dbtable", "public.t1")
+  .save()
+  */
+}
+```
