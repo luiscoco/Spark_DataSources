@@ -684,9 +684,20 @@ Now we right click on the "resources" folder and paste the "data" folder with al
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/8b7ce666-5043-4c40-a75a-f4332347df95)
 
-You can see the "data" folder with all the data files inside.
+You can see the "data" folder with all the data files inside
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/0956c5da-04d9-43c4-94d6-fefc31e4f567)
+
+See as an example the bands.json file
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/e717cf31-f413-44a2-b9e2-ed85f50f68fd)
+
+## 2.7. How to run the application
+
+Press in the execution green buton and select the option "Run 'DataSource'"
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/19e3a79f-8897-4a49-a863-3f8a4f7ea1de)
+
 
 
 
