@@ -287,9 +287,13 @@ insert into t1 values(1);
 
 20. Now we check with pgAdmin 4 that the database mydb and the table exist with values
 
+First we have to start the PostgreSQL server. Run this command to start the server:
+
 ```
 C:\Program Files\PostgreSQL\15\bin>pg_ctl start -D "C:\Program Files\PostgreSQL\15\data" -o "-p 5433"
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/012a732f-d510-4490-b627-4e02ae527a39)
 
 If you need to stop the server, you can use the following command:
 
@@ -303,7 +307,31 @@ If you need to know the status
 C:\Program Files\PostgreSQL\15\bin>pg_ctl status -D "C:\Program Files\PostgreSQL\15\data"
 ```
 
-21. If any problem accessing to table t1 from PostgreSQL then:
+21. Now we run the application "pg Admin 4"
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/39b221e8-4252-45ec-957d-34d7100d4527)
+
+22. We right click on "Servers" and select the menu option "Register->Server..."
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/8f847ed1-4c00-413a-8dfb-6e6d1dbbfd1f)
+
+23. Set the server connection values
+
+We enter the server name "localhost", the server port "5432", the database name "mydb", the username "myuser" and the user password "mypass".
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/ac13fa61-a367-4be7-bbfc-f9e9d6760621)
+
+We also have to input the connection name 
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/c3d73bf3-bc39-4554-8cd9-824d8e93307f)
+
+Then you can see the new connection in the tree
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/cf63b842-9170-4992-978e-80ce37a8c1b1)
+
+
+
+25. If any problem accessing to table t1 from PostgreSQL then:
 
 It seems like the user myuser might not have the necessary privileges on the table t1. 
 
