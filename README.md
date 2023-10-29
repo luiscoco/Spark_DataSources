@@ -387,7 +387,9 @@ We
 
 Download the PostgreSQL JDBC driver from internet
 
+https://jdbc.postgresql.org/download/
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/25f61e40-e8d2-499e-8a24-5efdb74272a0)
 
 Unzip and place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:\spark-3.5.0-bin-hadoop3\jars
 
