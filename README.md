@@ -106,6 +106,22 @@ docker run --name mypostgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postg
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/ceac3c57-76ab-47a8-86c8-fb011decf94e)
 
+This is a command to run a Docker container using the official PostgreSQL image from the Docker Hub. Let me break it down for you:
+
+**docker run:** This is the command to run a Docker container.
+
+**--name mypostgres:** This flag sets the name of the container to "mypostgres". You can use this name to refer to the container in other Docker commands.
+
+**-e POSTGRES_PASSWORD=password:** This sets an environment variable within the container. In this case, it's setting the password for the PostgreSQL user to "password". You can change "password" to whatever you prefer.
+
+**-p 5432:5432:** This flag maps the container's port 5432 (PostgreSQL's default port) to the host machine's port 5432. This means you can connect to the PostgreSQL database on the host machine using port 5432.
+
+**-d postgres:** This specifies the Docker image to use. In this case, it's using the official PostgreSQL image from Docker Hub.
+
+So, in summary, this Docker command is creating and running a PostgreSQL container named "mypostgres" with a specified password,
+
+mapping the container's PostgreSQL port to the host machine's port, and running it in the background (-d flag).
+
 3. We check the postegreSQL docker container is runnng. We also copy the ContainerID to execute it later.
 
 ```
@@ -150,6 +166,7 @@ Password: password
 create database mydb;
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/26792731-e9e2-4b70-a9b8-ad7732a6268f)
 
 8. For listing all the databases
 
@@ -157,6 +174,7 @@ create database mydb;
 \l
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/e8850324-f1d4-4a56-9bd0-272ae5f6bfc0)
 
 9. Now we create a new table called t1 inside the mydb database
 
@@ -164,6 +182,7 @@ create database mydb;
 create table t1(id int);
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/4b76f0af-920a-4e58-8966-f9d309a3d186)
 
 10. We select all rows and we check there is still no rows in the table
 
@@ -171,17 +190,23 @@ create table t1(id int);
 select * from t1;
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/3c6619cc-e5a1-48de-a9ac-c5f4157494f3)
+
 11. We insert a row in the table
 
 ```
 insert into t1 values(1);
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/e0277a17-abce-4048-9468-2bf1c830ac20)
+
 12. Again we run the select to see the rows items
 
 ```
 select * from t1;
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/713f2d5c-120d-4e0d-a58e-6d8ea4b67fb1)
 
 13. We create a new user and set the password for that user
 
