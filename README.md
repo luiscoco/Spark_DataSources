@@ -22,7 +22,7 @@ https://spark.apache.org/downloads.html
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/3e259f55-8881-4055-a38d-f8f6c8b954bf)
 
-After unzipping the file place the folder in your C: hard disk root.
+After unzipping the file "spark-3.5.0-bin-hadoop3" place the folder in your C: hard disk root.
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/a843fc85-8f75-43e3-a3ca-5f47ed7dc66e)
 
