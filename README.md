@@ -208,11 +208,13 @@ select * from t1;
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/713f2d5c-120d-4e0d-a58e-6d8ea4b67fb1)
 
-13. We create a new user and set the password for that user
+13. We create a new user "myuser" and set the password "mypass" for that user
 
 ```
 create user myuser with encrypted password 'mypass';
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/00d3da0a-d199-4eba-b5b2-85d25f47ffae)
 
 14. We grant all privileges to the user for using the mydb database
 
@@ -220,21 +222,23 @@ create user myuser with encrypted password 'mypass';
 grant all privileges on database mydb to myuser;
 ```
 
-15. We exit
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/67f209d8-b2c1-4d07-b528-c29f2a855628)
+
+15. We exit. Now we are in the root user
 
 ```
 exit
 ```
 
-16. Now we are in the root user
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/776501fd-122c-4e25-94e0-28dbdd8945c1)
 
-17. We clear the screen
+16. We clear the screen
 
 ```
 clear
 ```
 
-18. Connect to the database with the superuser
+17. Connect to the database with the superuser
 
 ```
 psql -U postgres -h localhost -p 5432 -d mydb
