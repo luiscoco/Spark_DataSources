@@ -399,7 +399,33 @@ Place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:
 
 # 2. Run the application in IngelliJ
 
-Run IngelliJ Community IDE.
+## 2.1. Prerequisites
+
+Before running IntelliJ we have to check the Java and Spark installations.
+
+To see the Java version open a command prompt and run the command:
+
+```
+java -version
+```
+
+Then we also run the command:
+
+```
+spark-shell
+```
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/fad2ab07-fc98-4913-9a29-77f836892330)
+
+We copy the Java, Spark and Scala versions in order to use this data later when creating out new Spark Scala project in IntelliJ.
+
+Java version: 11
+
+Spark version: 3.5.0
+
+Scala version: 2.12.18
+
+## 2.2. Run IngelliJ Community IDE.
 
 Install the "Scala" plugin
 
