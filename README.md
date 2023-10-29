@@ -492,7 +492,15 @@ Then we go to the build.sbt file and we copy the library dependency code:
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/94dd96dd-d4c9-4fdb-a668-981e4a848060)
 
-## 2.2. See the scala source code: scala\com.sparkExample1\DataSources.scala file
+## 2.4. How to create a new package and new file inside the package
+
+Firs we create the package. For that we right click on the scala folder and we select the menu options New->Package and we input the new package name
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/4369dc37-7041-4746-8333-0af217aba5f3)
+
+
+
+## 2.5. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
 ```scala
 package com.sparkExample1
