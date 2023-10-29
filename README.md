@@ -1,5 +1,9 @@
 # Spark DataSources JDBC PostgreSQL
 
+NOTE: if you have any doubt about how to run and initialize the PostgreSQL docker container, see the following youtube video.
+
+https://www.youtube.com/watch?v=S25oz7uDn_g
+
 # 1. Previous steps: install IntelliJ Community + Scala plugin, Java 11, Spark and winutils in your computer
 
 ## 1.1. Install IntelliJ Community + Scala plugin
