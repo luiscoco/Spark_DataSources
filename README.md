@@ -20,11 +20,21 @@ https://spark.apache.org/downloads.html
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/b07568f0-6399-48a9-ad31-e69d7cea4c92)
 
-![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/077abb82-3439-4706-9730-903d997f053d)
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/3e259f55-8881-4055-a38d-f8f6c8b954bf)
+
+After unzipping the file place the folder in your C: hard disk root.
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/a843fc85-8f75-43e3-a3ca-5f47ed7dc66e)
 
 There are to optins for setting the Spark environmental variables:
 
-a) Create a new variable SPARK_HOME and  
+a) Create a new variable SPARK_HOME and set the following value: C:\spark-3.5.0-bin-hadoop3
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/a08517be-e2c2-4fba-b830-0dec6c6f5ff0)
+
+Then we set the bin folder path in the PATH environmental variable.
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/1adce829-e22b-4282-9e59-d6c85e034013)
 
 b) Add the bin folder path to the PATH environmental variable.
 
