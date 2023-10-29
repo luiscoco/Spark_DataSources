@@ -85,7 +85,13 @@ https://www.pgadmin.org/download/pgadmin-4-windows/
 
 ## 1.6. Run PostgreSQL in Docker container and create a database and populate a table
 
-1. Pull and run the PostgreSQL docker container.
+1. Install and run Docker Desktop
+
+https://www.docker.com/products/docker-desktop/
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/58651335-5aa2-4a82-8c5a-5ed7b159b796)
+
+2. Pull and run the PostgreSQL docker container.
 
 For details see: https://hub.docker.com/_/postgres
 
@@ -94,14 +100,14 @@ docker run --name mypostgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postg
 ```
 
 
-2. We check the postegreSQL docker container is running. We also copy the ContainerID to execute it later.
+3. We check the postegreSQL docker container is running. We also copy the ContainerID to execute it later.
 
 ```
 docker ps -a
 ```
 
 
-3. We execute the postgreSQL container.
+4. We execute the postgreSQL container.
 
 ```
 docker start dockerContainerID
@@ -113,85 +119,85 @@ docker exec -it dockerContainerID bash
 ```
 
 
-4. We run this command
+5. We run this command
 
 ```
 psql -U postgres -W
 ```
 
-In Password enter the password we set when running the docker container
+6. In Password enter the password we set when running the docker container
 
 ```
 Password: password
 ```
 
 
-6. We create a new database called mydb
+7. We create a new database called mydb
 
 ```
 create database mydb;
 ```
 
 
-7. For listing all the databases
+8. For listing all the databases
 
 ```
 \l
 ```
 
 
-8. Now we create a new table called t1 inside the mydb database
+9. Now we create a new table called t1 inside the mydb database
 
 ```
 create table t1(id int);
 ```
 
 
-9. We select all rows and we check there is still no rows in the table
+10. We select all rows and we check there is still no rows in the table
 
 ```
 select * from t1;
 ```
 
-10. We insert a row in the table
+11. We insert a row in the table
 
 ```
 insert into t1 values(1);
 ```
 
-11. Again we run the select to see the rows items
+12. Again we run the select to see the rows items
 
 ```
 select * from t1;
 ```
 
-12. We create a new user and set the password for that user
+13. We create a new user and set the password for that user
 
 ```
 create user myuser with encrypted password 'mypass';
 ```
 
-13. We grant all privileges to the user for using the mydb database
+14. We grant all privileges to the user for using the mydb database
 
 ```
 grant all privileges on database mydb to myuser;
 ```
 
-14. We exit
+15. We exit
 
 ```
 exit
 ```
 
-15. Now we are in the root user
+16. Now we are in the root user
 
-16. We clear the screen
+17. We clear the screen
 
 ```
 clear
 ```
 
-17. Connect to the database with the superuser
+18. Connect to the database with the superuser
 
 ```
 psql -U postgres -h localhost -p 5432 -d mydb
@@ -209,13 +215,13 @@ Connect as myuser
 psql -U myuser -h localhost -p 5432 -d mydb
 ```
 
-18. Now try creating the table again
+19. Now try creating the table again
 
 ```
 create table t1(id int);
 ```
 
-19. Now we check with pgAdmin 4 that the database mydb and the table exist with values
+20. Now we check with pgAdmin 4 that the database mydb and the table exist with values
 
 ```
 C:\Program Files\PostgreSQL\15\bin>pg_ctl start -D "C:\Program Files\PostgreSQL\15\data" -o "-p 5433"
@@ -233,7 +239,7 @@ If you need to know the status
 C:\Program Files\PostgreSQL\15\bin>pg_ctl status -D "C:\Program Files\PostgreSQL\15\data"
 ```
 
-19. If any problem accessing to table t1 from PostgreSQL then:
+21. If any problem accessing to table t1 from PostgreSQL then:
 
 It seems like the user myuser might not have the necessary privileges on the table t1. 
 
@@ -269,7 +275,7 @@ Try running the SELECT query again:
 SELECT id FROM public.t1;
 ```
 
-20. Now connect to the PostgreSQL database and table with pgAdmin 4
+22. Now connect to the PostgreSQL database and table with pgAdmin 4
 
 
 ## 1.7. Install PostgreSQL JDBC driver in Spark folder
