@@ -84,11 +84,15 @@ https://www.pgadmin.org/download/pgadmin-4-windows/
 
 ## 1.6. Run PostgreSQL in Docker container and create a database and populate a table
 
-1. Install and run Docker Desktop
+1. Download, install Docker Desktop
 
 https://www.docker.com/products/docker-desktop/
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/58651335-5aa2-4a82-8c5a-5ed7b159b796)
+
+Run Docker Desktop
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/7eeffeb3-a2c6-4d54-bb4b-c11c4fa0f02a)
 
 2. Pull and run the PostgreSQL docker container.
 
