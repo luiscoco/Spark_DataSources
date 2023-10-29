@@ -38,7 +38,7 @@ Then we set the bin folder path in the PATH environmental variable.
 
 b) Add the bin folder path to the PATH environmental variable.
 
-
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/72893784-1f49-49e9-b7cc-ba3538631fb1)
 
 ## 1.4. Install winutils and set HADOOP_HOME environmental variable
 
