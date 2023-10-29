@@ -399,6 +399,20 @@ Place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:
 
 # 2. Run the application in IngelliJ
 
+Run IngelliJ Community IDE.
+
+Install the "Scala" plugin
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/b972e53d-958a-42e8-a297-061fd06353c4)
+
+Create a new project
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/d732beb5-e55b-431c-a658-46519560bea4)
+
+Ente the new project input data
+
+
+
 ## 2.1. See the dependencies: build.sbt file
 
 ```
