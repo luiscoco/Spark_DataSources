@@ -663,3 +663,22 @@ moviesDF.write
   */
 }
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/759ad3a4-1732-476a-8d86-bd83c408a142)
+
+## 2.6. We create the resource folder to place the data
+
+We right click on the "main" folder and we select the menu options "New->Directory"
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/7915d64c-e915-423e-80df-ae20ded0eb58)
+
+The we select "resources"
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/e1a0af7c-9ae7-4aac-a8b5-1de31318e8eb)
+
+Now we can see the "resources" folder was created
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/dc942251-f3c2-47ad-b470-98b3656358bd)
+
+Now we copy inside the "resources" folder the data files
+
