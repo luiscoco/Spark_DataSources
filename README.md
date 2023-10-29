@@ -6,37 +6,30 @@
 
 https://www.jetbrains.com/idea/download/?section=windows
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/aca9df76-eca9-4d52-b9a8-07e776be6ee7)
 
 ## 1.2. Install Java 11 (JDK) and set JAVA_HOME environmental variable
 
 https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/6e7962b1-b0d0-4318-9ce4-b74cfb98b8a3)
 
 ## 1.3. Install Spark and set SPARK_HOME environmental variable or directly add the bin folder path in the PATH environmental variable
 
 https://spark.apache.org/downloads.html
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/7e0d20f8-9e7c-4752-96cb-546bb195a6c1)
 
 Add the bin folder path to the PATH environmental variable
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/39b6b3fd-6cb3-4c67-82b4-1c3a1b5557b3)
 
 ## 1.4. Install winutils and set HADOOP_HOME environmental variable
 
 https://github.com/kontext-tech/winutils
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/1e93fcfa-7731-402d-bcca-ffdacf735455)
 
 Set HADOOP_HOME environmental variable
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/1ea6a16c-0d86-4adb-bbc9-79daf73ae874)
 
 Add the bin folder path to the PATH environmental variable
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/e9e7591b-487e-4044-be00-85a7f537d0a2)
 
 ## 1.5. Install PostgreSQL and pgAdmin in you local laptop
 
@@ -62,7 +55,6 @@ For details see: https://hub.docker.com/_/postgres
 docker run --name mypostgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/38cee1fe-5381-44e7-a653-4293985b917f)
 
 2. We check the postegreSQL docker container is running. We also copy the ContainerID to execute it later.
 
@@ -70,7 +62,6 @@ docker run --name mypostgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postg
 docker ps -a
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/e2f851ba-8c63-47e6-ac96-a79e642f770f)
 
 3. We execute the postgreSQL container.
 
@@ -78,13 +69,11 @@ docker ps -a
 docker start dockerContainerID
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/df2bf5e7-1c91-405a-a16e-334ab87b331f)
 
 ```
 docker exec -it dockerContainerID bash
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/985de7ea-ebb4-4598-8537-80a6cbfe82ca)
 
 4. We run this command
 
@@ -98,7 +87,6 @@ In Password enter the password we set when running the docker container
 Password: password
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/22fc872b-be90-412f-8a7d-83ed3397e76c)
 
 6. We create a new database called mydb
 
@@ -106,7 +94,6 @@ Password: password
 create database mydb;
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/4233b451-18d0-4fa6-98fe-db3f4ad64fe8)
 
 7. For listing all the databases
 
@@ -114,7 +101,6 @@ create database mydb;
 \l
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/1b1246c7-790d-4db3-9bd8-c669325b345f)
 
 8. Now we create a new table called t1 inside the mydb database
 
@@ -122,7 +108,6 @@ create database mydb;
 create table t1(id int);
 ```
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/ee6e9814-5438-41cd-bdc7-c5e9ecdbbf25)
 
 9. We select all rows and we check there is still no rows in the table
 
@@ -253,11 +238,11 @@ SELECT id FROM public.t1;
 
 Download the PostgreSQL JDBC driver from internet
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/fd233715-34c3-441e-95a0-ca4e304126ba)
+
 
 Unzip and place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:\spark-3.5.0-bin-hadoop3\jars
 
-![image](https://github.com/luiscoco/Spark_DataSources_with_IngelliJ_and_PostgreSQL/assets/32194879/9bf312ee-279e-43fa-b2aa-7a7f35920a8d)
+
 
 
 # 2. Run the application in IngelliJ
