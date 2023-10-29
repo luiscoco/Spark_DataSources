@@ -6,18 +6,28 @@
 
 https://www.jetbrains.com/idea/download/?section=windows
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/d2cce9e7-6393-4a67-aef5-9a1b44d5c879)
 
 ## 1.2. Install Java 11 (JDK) and set JAVA_HOME environmental variable
 
 https://www.oracle.com/es/java/technologies/javase/jdk11-archive-downloads.html
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/e7b24fb3-8de8-4b6a-9864-ea2eab2fec26)
 
 ## 1.3. Install Spark and set SPARK_HOME environmental variable or directly add the bin folder path in the PATH environmental variable
 
 https://spark.apache.org/downloads.html
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/b07568f0-6399-48a9-ad31-e69d7cea4c92)
 
-Add the bin folder path to the PATH environmental variable
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/077abb82-3439-4706-9730-903d997f053d)
+
+There are to optins for setting the Spark environmental variables:
+
+a) Create a new variable SPARK_HOME and  
+
+b) Add the bin folder path to the PATH environmental variable.
+
 
 
 ## 1.4. Install winutils and set HADOOP_HOME environmental variable
