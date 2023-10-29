@@ -255,6 +255,11 @@ clear
 ```
 psql -U postgres -h localhost -p 5432 -d mydb
 ```
+Try to create a table and insert a row running these commands:
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/4022506c-2a86-426c-847f-2b7e85740f92)
+
+18. If you cannot create the table then follow these steps:
 
 Grant necessary privileges to the myuser on the public schema
 
@@ -272,6 +277,12 @@ psql -U myuser -h localhost -p 5432 -d mydb
 
 ```
 create table t1(id int);
+```
+
+We insert a row in the table
+
+```
+insert into t1 values(1);
 ```
 
 20. Now we check with pgAdmin 4 that the database mydb and the table exist with values
