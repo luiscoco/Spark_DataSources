@@ -472,7 +472,21 @@ Then we press the sbt button in the righ hand side menu and the reload project b
 
 After reloading the project dependencies we will see this result
 
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/0e010607-1fa2-404d-ace8-61c88c8910ba)
 
+**IMPORTANT NOTE:** How to look for libraries dependencies in internet 
+
+In **Maven repository** we can find the dependencies in internet. For example if we are looking for the "org.postgresql"   
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/971b2004-5e28-4ab1-9740-7a4676360c38)
+
+We press in the version link, in this case we press in the 42.6.0 link
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/d5125f8e-7319-4c7e-931a-ec53e0dac8ec)
+
+And then we select the SBT tab an copy the dependency reference in our build.sbt file
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/a2b32f81-6481-457b-885c-22e70c597d18)
 
 ## 2.2. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
