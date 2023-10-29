@@ -75,9 +75,13 @@ In the following URL you can downlaod postgreSQL
 
 https://www.postgresql.org/download/
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/8a71288b-abb3-406e-b871-1212e2944fe2)
+
 In the following URL you can download pgAdmin
 
 https://www.pgadmin.org/download/pgadmin-4-windows/
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/536bed55-792f-43ce-91a8-4fdeb100f981)
 
 ## 1.6. Run PostgreSQL in Docker container and create a database and populate a table
 
