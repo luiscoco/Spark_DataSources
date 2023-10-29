@@ -506,7 +506,13 @@ Now we create a new file inside the package. We select the menu options "New->Sc
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/b4900b59-db07-4aec-8670-d788e8f94560)
 
+We input the new "Object" name and we set as "DataSource", an arbitrary name we invented
+
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/ce71f7ef-ef85-4324-8baf-90e898b8ccbc)
+
+Now you can see the new package and inside the new file "DataSource.scala" with the new object "DataSource" 
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/29208814-ef64-4331-850e-ded374fdd49c)
 
 
 ## 2.5. See the scala source code: scala\com.sparkExample1\DataSources.scala file
