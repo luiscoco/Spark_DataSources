@@ -122,10 +122,13 @@ docker start dockerContainerID
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/bf09a7a6-cf63-4677-b5a2-3bde716efd80)
 
+We enter in the command bash in the running PostgreSQL docker container
+
 ```
 docker exec -it dockerContainerID bash
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/e1fc4697-ddd2-4590-b19e-a3162ef30bd9)
 
 5. We run this command
 
@@ -139,6 +142,7 @@ psql -U postgres -W
 Password: password
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/b5442bf7-be60-42c7-8a60-d4d9405a42f1)
 
 7. We create a new database called mydb
 
