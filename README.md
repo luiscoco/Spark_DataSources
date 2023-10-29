@@ -514,16 +514,21 @@ Now you can see the new package and inside the new file "DataSource.scala" with 
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/29208814-ef64-4331-850e-ded374fdd49c)
 
+We "extends App" for the "DataSource" object. An we can see the execute green button appears in the left margin.
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/70e2d524-8c83-41c1-a49b-cd6e5b48c747)
+
+Now we can input the rest of the application source code.
 
 ## 2.5. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
 ```scala
-package com.sparkExample1
+package com.luisdatasource
 
 import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.sql.types._
 
-object DataSources extends App {
+object DataSource extends App {
 
   val spark = SparkSession.builder()
     .appName("Data Sources and Formats")
