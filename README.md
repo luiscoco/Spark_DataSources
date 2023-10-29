@@ -498,6 +498,15 @@ Firs we create the package. For that we right click on the scala folder and we s
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/4369dc37-7041-4746-8333-0af217aba5f3)
 
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/03a390e5-df2a-4319-8bb3-21304b021ce1)
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/89cfe31e-d174-4035-b871-fe4a6c6ec2f9)
+
+Now we create a new file inside the package. We select the menu options "New->Scala Class" and the "Object"
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/b4900b59-db07-4aec-8670-d788e8f94560)
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/ce71f7ef-ef85-4324-8baf-90e898b8ccbc)
 
 
 ## 2.5. See the scala source code: scala\com.sparkExample1\DataSources.scala file
