@@ -488,6 +488,10 @@ And then we select the SBT tab an copy the dependency reference in our build.sbt
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/a2b32f81-6481-457b-885c-22e70c597d18)
 
+Then we go to the build.sbt file and we copy the library dependency code:
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/94dd96dd-d4c9-4fdb-a668-981e4a848060)
+
 ## 2.2. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
 ```scala
