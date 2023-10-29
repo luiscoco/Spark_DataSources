@@ -62,8 +62,7 @@ Then add the bin folder path to the PATH environmental variable
 
 b) Add the bin folder path to the PATH environmental variable.
 
-
-
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/743f6394-2eac-44a3-b51e-2fc7ab8ea632)
 
 ## 1.5. Install PostgreSQL and pgAdmin in you local laptop
 
