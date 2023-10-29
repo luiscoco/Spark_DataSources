@@ -698,6 +698,23 @@ Press in the execution green buton and select the option "Run 'DataSource'"
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/19e3a79f-8897-4a49-a863-3f8a4f7ea1de)
 
+You can see the "Build completed successfully" and the "Process finished with exit code 0"
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/496d431c-0320-4247-b24a-4663d4944d4d)
+
+IMPORTANT NOTE: take care if you restart your computer, if this is the case then:
+
+Run Docker Desktop
+
+Run the postgreSQL container.
+
+Enter in the continer and follow all the steps defined above to create a new user and grant permission
+
+Be sure to start the server in your local machine also.
+
+```
+C:\Program Files\PostgreSQL\15\bin>pg_ctl start -D "C:\Program Files\PostgreSQL\15\data" -o "-p 5433"
+```
 
 
 
