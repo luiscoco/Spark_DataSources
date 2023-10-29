@@ -321,17 +321,21 @@ We enter the server name "localhost", the server port "5432", the database name 
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/ac13fa61-a367-4be7-bbfc-f9e9d6760621)
 
-We also have to input the connection name 
+We also have to input the connection name "mypostgres"
 
-![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/c3d73bf3-bc39-4554-8cd9-824d8e93307f)
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/6d8ade26-5609-4888-862e-d2fb9bb977ba)
 
-Then you can see the new connection in the tree
+If you expand the tree you can see the database "mydb" and the table "t1"
 
-![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/cf63b842-9170-4992-978e-80ce37a8c1b1)
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/f7a7b1bd-9d39-4554-89ee-6ee75c288eec)
 
+You can run the select statement to see the first table rows
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/739e9056-44ee-4a5c-8ac0-cd97e42d991d)
 
 25. If any problem accessing to table t1 from PostgreSQL then:
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/737d0bab-4eb0-4fe4-836d-1fca81e9b552)
 
 It seems like the user myuser might not have the necessary privileges on the table t1. 
 
@@ -342,6 +346,8 @@ Connect to the database as the superuser:
 ```
 psql -U postgres -h localhost -p 5432 -d mydb
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/f1a6c971-61a7-48e3-b03b-adace5b9ea18)
 
 Grant necessary privileges to myuser on the t1 table:
 
@@ -367,8 +373,15 @@ Try running the SELECT query again:
 SELECT id FROM public.t1;
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/d2133640-fc7f-4bbb-9970-eb2b63c8ec4c)
+
 22. Now connect to the PostgreSQL database and table with pgAdmin 4
 
+We 
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/08aae750-68d3-40f1-b611-3a74339302bb)
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/2f0aca3b-8c25-42b1-9899-824dc4a8b8dc)
 
 ## 1.7. Install PostgreSQL JDBC driver in Spark folder
 
