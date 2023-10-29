@@ -704,17 +704,28 @@ You can see the "Build completed successfully" and the "Process finished with ex
 
 IMPORTANT NOTE: take care if you restart your computer, if this is the case then:
 
-Run Docker Desktop
+- Run Docker Desktop
 
-Run the postgreSQL container.
+- Run the postgreSQL container.
 
-Enter in the continer and follow all the steps defined above to create a new user and grant permission
+- Enter in the continer and follow all the steps defined above to create a new user and grant permission
 
-Be sure to start the server in your local machine also.
+- Be sure to start the server in your local machine also.
 
 ```
 C:\Program Files\PostgreSQL\15\bin>pg_ctl start -D "C:\Program Files\PostgreSQL\15\data" -o "-p 5433"
 ```
 
+## 2.8. Application output 
 
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/6eced262-e1c2-475c-8fe0-3bcbd5fd76fe)
 
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/f58d892f-6b4d-4619-a11c-81037e738c65)
+
+Also this new data files were created
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/3082a7f2-65cf-4399-94fe-00584a32b83f)
+
+**IMPORTANT NOTE:** if you would like to rerun the application you should delete the following folders before runing the application again
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/48dadcce-1703-4c39-8c28-a916beba9968)
