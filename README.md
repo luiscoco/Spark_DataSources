@@ -391,10 +391,11 @@ https://jdbc.postgresql.org/download/
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/25f61e40-e8d2-499e-8a24-5efdb74272a0)
 
-Unzip and place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:\spark-3.5.0-bin-hadoop3\jars
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/5641ba9a-6cec-4278-a4cf-7847a51acff7)
 
+Place the jar file "postgresql-42.6.0.jar" inside the path spark jars folder: C:\spark-3.5.0-bin-hadoop3\jars
 
-
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/295ab950-f2f5-4cf3-96cc-5cc323e698b2)
 
 # 2. Run the application in IngelliJ
 
