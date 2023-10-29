@@ -680,5 +680,13 @@ Now we can see the "resources" folder was created
 
 ![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/dc942251-f3c2-47ad-b470-98b3656358bd)
 
-Now we copy inside the "resources" folder the data files
+Now we right click on the "resources" folder and paste the "data" folder with all the data files inside.
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/8b7ce666-5043-4c40-a75a-f4332347df95)
+
+You can see the "data" folder with all the data files inside.
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/0956c5da-04d9-43c4-94d6-fefc31e4f567)
+
+
 
