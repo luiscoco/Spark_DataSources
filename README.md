@@ -1,4 +1,4 @@
-# Spark DataSources
+# Spark DataSources JDBC PostgreSQL
 
 # 1. Previous steps: install IntelliJ Community + Scala plugin, Java 11, Spark and winutils in your computer
 
