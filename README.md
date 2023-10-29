@@ -437,9 +437,13 @@ Create a new project
 
 Ente the new project input data
 
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/0cdab561-d45e-4245-97df-5cdd13401276)
 
+Then we can see the new project in IntelliJ
 
-## 2.1. See the dependencies: build.sbt file
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/2df99f59-ea8b-43b2-b8c2-fcc8fbe5a372)
+
+## 2.3. We input the bild.sbt file source code
 
 ```
 ThisBuild / version := "0.1.0-SNAPSHOT"
@@ -448,7 +452,7 @@ ThisBuild / scalaVersion := "2.12.18"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "FirstSparkProject"
+    name := "Spark_JDBC_PostgreSQL"
   )
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-core
@@ -459,6 +463,16 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.0"
 
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 ```
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/6b7a09b1-1626-4e47-8644-0e33de7606c5)
+
+Then we press the sbt button in the righ hand side menu and the reload project button
+
+![image](https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL/assets/32194879/0b0af871-2095-4747-aa4a-e5f572e817dc)
+
+After reloading the project dependencies we will see this result
+
+
 
 ## 2.2. See the scala source code: scala\com.sparkExample1\DataSources.scala file
 
