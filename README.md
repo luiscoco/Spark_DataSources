@@ -46,7 +46,7 @@ We download or clone this git repository: https://github.com/kontext-tech/winuti
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/22cc3ecc-1847-4f8b-89d1-14a434982363)
 
-We plaze the winutils folder in C:
+We place the winutils folder in C:
 
 ![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/c3d66801-374d-4d8b-a219-298b39b30141)
 
@@ -98,17 +98,21 @@ Run Docker Desktop
 
 For details see: https://hub.docker.com/_/postgres
 
+Open command prompt as administrator and run the following command to run the PostgreSQL docker container.
+
 ```
 docker run --name mypostgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/ceac3c57-76ab-47a8-86c8-fb011decf94e)
 
-3. We check the postegreSQL docker container is running. We also copy the ContainerID to execute it later.
+3. We check the postegreSQL docker container is runnng. We also copy the ContainerID to execute it later.
 
 ```
 docker ps -a
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/8a93ba36-22d5-4fef-90de-e6dbf063fd2d)
 
 4. We execute the postgreSQL container.
 
@@ -116,6 +120,7 @@ docker ps -a
 docker start dockerContainerID
 ```
 
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/bf09a7a6-cf63-4677-b5a2-3bde716efd80)
 
 ```
 docker exec -it dockerContainerID bash
