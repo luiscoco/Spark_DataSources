@@ -42,13 +42,27 @@ b) Add the bin folder path to the PATH environmental variable.
 
 ## 1.4. Install winutils and set HADOOP_HOME environmental variable
 
-https://github.com/kontext-tech/winutils
+We download or clone this git repository: https://github.com/kontext-tech/winutils
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/22cc3ecc-1847-4f8b-89d1-14a434982363)
+
+We plaze the winutils folder in C:
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/c3d66801-374d-4d8b-a219-298b39b30141)
+
+Set HADOOP_HOME environmental variable. There are two options:
+
+a) Create a new variable HADOOP_HOME and the the following value
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/f9137714-0684-4a80-bbf7-284a553c17c8)
+
+Then add the bin folder path to the PATH environmental variable
+
+![image](https://github.com/luiscoco/Spark_DataSources/assets/32194879/6cce020a-802c-4da5-8594-f2d00d163d5a)
+
+b) Add the bin folder path to the PATH environmental variable.
 
 
-Set HADOOP_HOME environmental variable
-
-
-Add the bin folder path to the PATH environmental variable
 
 
 ## 1.5. Install PostgreSQL and pgAdmin in you local laptop
