@@ -152,6 +152,18 @@ docker exec -it dockerContainerID bash
 psql -U postgres -W
 ```
 
+This is a command-line instruction for interacting with PostgreSQL, a popular open-source relational database management system. Let's break it down:
+
+**psql**: This is the command-line client for PostgreSQL. It allows you to interact with the database using SQL queries and commands.
+
+**-U postgres**: This specifies the username to connect to the database. In this case, it's set to "postgres." You're connecting as the user "postgres."
+
+**-W**: This option prompts for the password. After entering the command, you'll be asked to enter the password for the specified user ("postgres" in this case). 
+
+It's a security measure to ensure that only authorized users can access the database.
+
+So, when you run this command, it initiates a connection to a PostgreSQL database as the user "postgres" and prompts you for the password before allowing access.
+
 6. In Password enter the password we set when running the docker container
 
 ```
