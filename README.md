@@ -1,5 +1,7 @@
 # Spark DataSources JDBC PostgreSQL
 
+https://github.com/luiscoco/Spark_DataSources_JDBC_PostgreSQL
+
 NOTE: if you have any doubt about how to run and initialize the PostgreSQL docker container, see the following youtube video.
 
 https://www.youtube.com/watch?v=S25oz7uDn_g
